@@ -1,6 +1,5 @@
 <?php
 
-
 namespace api\broker;
 
 use api\dao\GenericDAO;
@@ -10,6 +9,19 @@ use api\dao\GenericDAO;
  *
  * @author Morettic LTDA
  */
-class RequestBroker {
+class RequestBroker extends \stdClass {
+
+    private static final function init() {
+        // Set required headers
+        header('Content-Type: application/json; charset=utf-8');
+        header('Access-Control-Allow-Origin: *');
+    }
+
     //put your code here
+    public static final function unsubscribeIt($sms) {
+        self::init();
+        $response = GenericDAO::unsubscribe($sms);
+        return json_encode($response);
+    }
+
 }
