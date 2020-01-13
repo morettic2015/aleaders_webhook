@@ -11,7 +11,7 @@ use Medoo\Medoo;
  */
 class GenericDAO {
 
-    const QUERY_BY_SMS = "SELECT id FROM mmk_leads where mobile = '$';";
+    const QUERY_BY_SMS = "SELECT id FROM mmk_leads where mobile = '$' or email = '@';";
 
 //put your code here
 
@@ -28,9 +28,9 @@ class GenericDAO {
     /**
      * @see Process response
      */
-    public static final function unsubscribe($sms) {
+    public static final function unsubscribe($sms, $email = NULL) {
         $dao = self::connectDB();
-        $query = str_replace("$", $sms, self::QUERY_BY_SMS);
+        $query = str_replace("@", $email, str_replace("$", $sms, self::QUERY_BY_SMS));
         $data = $dao->query($query)->fetchAll();
 
         $leadID = $data[0]['id'];
