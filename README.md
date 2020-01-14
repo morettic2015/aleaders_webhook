@@ -33,4 +33,4 @@ named local.php inside /app/config
 #### 6) Inside campaign call webhook url => 
     *       https://yourmauticinstall.com/webhook/index.php?mobile=xxxx&email=123@mail.com
 
-### 7) Its done now you will have a unsubscibe webhook for some mautic campaign
+### 7) Its done now you will have a unsubscibe webhook given some mautic campaign action been triggered

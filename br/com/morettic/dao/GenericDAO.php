@@ -14,7 +14,9 @@ class GenericDAO {
     const QUERY_BY_SMS = "SELECT id FROM mmk_leads where mobile like '%$%'";
     const QUERY_BY_EMAIL = "SELECT id FROM mmk_leads where email = '@';";
 
-//put your code here
+    /*
+     * Connect to the database
+     */
 
     private static final function connectDB() {
         return new Medoo([
