@@ -18,9 +18,9 @@ class RequestBroker extends \stdClass {
     }
 
     //put your code here
-    public static final function unsubscribeIt($sms,$email=NULL) {
+    public static final function unsubscribeIt($sms,$email,$id) {
         self::init();
-        $response = GenericDAO::unsubscribe($sms,$email);
+        $response = GenericDAO::unsubscribe($sms,$email,$id);
         return json_encode($response);
     }
 

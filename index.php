@@ -12,8 +12,9 @@ use api\broker\RequestBroker;
 
 $sms = $_GET['mobile'];
 $email = $_GET['email'];
+$id = $_GET['id'];
 //echo $sms;
 
-echo RequestBroker::unsubscribeIt($sms,$email);
+echo RequestBroker::unsubscribeIt($sms,$email,$id);
 
 
