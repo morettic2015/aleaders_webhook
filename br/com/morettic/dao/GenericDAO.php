@@ -20,9 +20,9 @@ class GenericDAO {
         return new Medoo([
             'database_type' => 'mysql',
             'database_name' => 'mautic',
-            'server' => 'cloud.a-leaders.com',
+            'server' => 'localhost',
             'username' => 'r1',
-            'password' => 'r4m3m52@123RRR'
+            'password' => 'xxxxxxx'
         ]);
     }
 
