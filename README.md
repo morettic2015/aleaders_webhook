@@ -22,9 +22,15 @@ its tested with Mautic 2.15.3
 if you dont know your database credentials look inside mautic install file
 named local.php inside /app/config
 
-### 2) Create a folder called webhook inside mautic install
-### 3) Upload files to webhook folder
-### 4) Change files permissions to CHMOD  775 ./webhook -R
-### 5) Change Files group to chown www-data:www-data ./webhook -R
-### 6) Inside campaign call webhook url => https://yourmauticinstall.com/webhook/index.php?mobile=xxxx&email=123@mail.com
+#### 2) Create a folder called webhook inside mautic install
+
+#### 3) Upload files to webhook folder
+
+#### 4) Change files permissions to CHMOD  775 ./webhook -R
+
+#### 5) Change Files group to chown www-data:www-data ./webhook -R
+
+#### 6) Inside campaign call webhook url => 
+    *       https://yourmauticinstall.com/webhook/index.php?mobile=xxxx&email=123@mail.com
+
 ### 7) Its done now you will have a unsubscibe webhook for some mautic campaign
